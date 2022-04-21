@@ -2,7 +2,7 @@ from PIL import Image
 import pytesseract
 import numpy as np
 
-filename = 'canada_ontario_cvo_1_1.jpg' 
+filename = 'data/canada_ontario_cvo/canada_ontario_cvo_1_1.jpg' #choose an image 
 img1 = np.array(Image.open(filename))
 pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe' #Directory where Tesseract is installed
 text = pytesseract.image_to_string(img1)
